@@ -14,8 +14,8 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="min-h-screen px-8 md:px-24 py-24">
-      <h2 className="text-4xl font-bold mb-16">Technical Skills</h2>
+    <section className=" px-8 md:px-24 py-24">
+      <h2 className="text-4xl font-bold mb-16 text-white">Technical Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
         {skills.map((skill, index) => (
           <motion.div
@@ -29,7 +29,7 @@ export default function SkillsSection() {
             <div className={`${skill.color} mb-4`}>
               {skill.icon}
             </div>
-            <h3 className="text-xl font-semibold text-center">{skill.name}</h3>
+            <h3 className="text-xl font-semibold text-center text-white">{skill.name}</h3>
           </motion.div>
         ))}
       </div>

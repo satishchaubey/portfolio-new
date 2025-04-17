@@ -3,13 +3,12 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import HeroSection from '@/components/Hero'
-import ProjectsSection from '@/components/Projects'
 import SkillsSection from '@/components/Skills'
-import ContactSection from '@/components/Contact'
+import BlogArticles from '@/components/Contact'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), {
   ssr: false,
-  loading: () => <div className="w-full h-screen bg-black" />,
+  loading: () => <div className="w-full h-screen " />,
 })
 
 export default function Home() {
@@ -25,9 +24,8 @@ export default function Home() {
 
           <main className="relative z-10">
             <HeroSection />
-            <ProjectsSection />
             <SkillsSection />
-            <ContactSection />
+            <BlogArticles />
           </main>
         </section>
       </main>

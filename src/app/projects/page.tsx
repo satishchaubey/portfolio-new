@@ -1,5 +1,6 @@
 'use client';
 
+import ProjectSection from '@/components/Project';
 import dynamic from 'next/dynamic';
 import React, { Suspense } from 'react';
 
@@ -17,6 +18,7 @@ const Project = () => {
               <Scene />
             </div>
           </Suspense>
+          <ProjectSection/>
         </section>
     </div>
   )
