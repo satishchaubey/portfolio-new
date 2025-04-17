@@ -14,7 +14,7 @@ export default function HeroSection() {
           className="mb-4"
         >
           <span className="text-2xl md:text-3xl text-gray-400 font-mono">
-            Hi, I'm
+            Hi, I&apos;m {/* Fixed apostrophe */}
           </span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -32,8 +32,9 @@ export default function HeroSection() {
           transition={{ delay: 0.4 }}
         >
           <motion.h2
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-4xl md:text-6xl font-bold bg-amber-50 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
           >
             Full Stack Developer
           </motion.h2>
@@ -41,7 +42,7 @@ export default function HeroSection() {
             initial={{ width: 0 }}
             animate={{ width: '100%' }}
             transition={{ delay: 0.6, duration: 1 }}
-            className="h-1 bg-lime-50 mt-2"
+            className="h-1 bg-gradient-to-r from-purple-500 to-pink-600 mt-2"
           />
         </motion.div>
 
@@ -73,13 +74,13 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute top-0 -left-20 w-full h-72  rounded-full blur-3xl -z-10"
+          className="absolute top-0 -left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -z-10"
         />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-0 -right-20 w-full h-72 rounded-full blur-3xl -z-10"
+          className="absolute bottom-0 -right-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl -z-10"
         />
       </div>
     </section>

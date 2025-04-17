@@ -15,18 +15,23 @@ const Scene = dynamic(() => import('@/components/canvas/Scene'), {
 export default function Home() {
   return (
     <>
-      <Suspense fallback={null}>
-        <div className="fixed top-0 left-0 w-full h-full -z-10 bg-black">
-          <Scene />
-        </div>
-      </Suspense>
+      <main className="pt-20">
+        <section id="/" className="min-h-screen">
+          <Suspense fallback={null}>
+            <div className="fixed top-0 left-0 w-full h-full -z-10 bg-black">
+              <Scene />
+            </div>
+          </Suspense>
 
-      <main className="relative z-10">
-        <HeroSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
+          <main className="relative z-10">
+            <HeroSection />
+            <ProjectsSection />
+            <SkillsSection />
+            <ContactSection />
+          </main>
+        </section>
       </main>
+
     </>
   )
 }
